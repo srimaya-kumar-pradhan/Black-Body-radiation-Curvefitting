@@ -7,21 +7,21 @@ from utils import compute_metrics, get_star_class
 import visualization
 
 def main():
-    print("🚀 Starting Astrophysics Blackbody Simulation...\n")
+    print(" Starting Astrophysics Blackbody Simulation...\n")
     
     os.makedirs('results', exist_ok=True)
     os.makedirs('data', exist_ok=True)
     
     # 1. Generate Environment
     T_true = 5800  # Sun-like star
-    print(f"🌌 Generating synthetic spectral data for True T = {T_true} K")
+    print(f" Generating synthetic spectral data for True T = {T_true} K")
     wavelengths, intensity_noisy, intensity_true = generate_synthetic_data(T_true, num_points=200, noise_level=0.1)
     
     # Save simulated data
     np.savez('data/synthetic_spectral_data.npz', wavelengths=wavelengths, intensity_noisy=intensity_noisy)
     
     # 2. Optimization (Curve Fitting with history)
-    print(f"⚙️ Running nonlinear optimization tracking iterations...")
+    print(f" Running nonlinear optimization tracking iterations...")
     guess_history = []
     
     def residual(params, wl, data):
@@ -46,7 +46,7 @@ def main():
     intensity_fit = planck_law(wavelengths, T_est)
     mse, r2, perc_error, accuracy = compute_metrics(intensity_noisy, intensity_fit, T_true, T_est)
     
-    print("\n✅ Optimization Complete:")
+    print("\n Optimization Complete:")
     print(f"   - Estimated Temperature: {T_est:.0f} K")
     print(f"   - Star Classification:   {star_class}")
     print(f"   - Estimation Accuracy:   {accuracy:.2f}%\n")
@@ -54,23 +54,23 @@ def main():
     # Ensure a non-blocking interactive environment for the sequential popups
     plt.ion() 
     
-    print("🎬 1. Animating optimization process... (Check pop-up window)")
+    print(" 1. Animating optimization process... (Check pop-up window)")
     visualization.animate_optimization(wavelengths, intensity_noisy, T_true, guess_history)
     
-    print("📊 2. Rendering static fit plot...")
+    print(" 2. Rendering static fit plot...")
     visualization.plot_static_fit(wavelengths, intensity_noisy, intensity_fit, intensity_true, T_true, T_est)
     
-    print("⭐ 3. Rendering Star Visualization based on temperature...")
+    print(" 3. Rendering Star Visualization based on temperature...")
     visualization.plot_star(T_est, star_class)
     
-    print("🌌 4. Rendering simple Accretion Disk proxy...")
+    print(" 4. Rendering simple Accretion Disk proxy...")
     visualization.plot_black_hole(T_est)
     
-    print("\n🎛️ 5. Launching Interactive Slider... (Close the window to exit program)")
+    print("\n 5. Launching Interactive Slider... (Close the window to exit program)")
     plt.ioff() # Turn interactive mode off for the final blocking window
     visualization.launch_interactive_slider()
     
-    print("\n🎉 Simulation Finished successfully!")
+    print("\n Simulation Finished successfully!")
 
 if __name__ == "__main__":
     # Suppress verbose warnings from matplotlib bounds interactions locally
