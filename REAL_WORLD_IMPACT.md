@@ -138,13 +138,13 @@ If I were to extend this project for a research:
 
 ##  Why "Fitting Data to a Physical Law" Is Better Research Than "Predicting Outcomes"
 
-| Research Philosophy | Your Project | ML Project |
+| Research Philosophy | MY Project | ML Project |
 |-------------------|-------------|-----------|
 | **Goal** | Understand nature, extract physical parameters | Predict future behavior |
 | **Method** | Enforce physical constraints, derive from first principles | Learn patterns from data |
 | **Uncertainty** | Can compute error bars using physics | Black box, hard to quantify |
 | **Trust** | Verifiable against other experiments | Depends on training data quality |
-| **Career Impact** | Leads to publications in science journals | Leads to positions at tech companies |
+
 
 ---
 
