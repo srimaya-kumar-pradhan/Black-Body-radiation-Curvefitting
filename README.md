@@ -54,36 +54,36 @@ python main.py
 
 ---
 
-## 🎬 What Happens When You Run It?
+##  What Happens When You Run It?
 
 The program executes a complete **physics + visualization pipeline**:
 
 ---
 
-### 📊 Step 1: Data Generation / Loading
+###  Step 1: Data Generation / Loading
 
 * Synthetic or real spectral data (wavelength vs intensity) is loaded
 * This simulates radiation emitted by a star
 
 ---
 
-### 🎬 Step 2: Curve Fitting Animation
+###  Step 2: Curve Fitting Animation
 
 * The model starts with an initial guess of temperature
 * You will see an **animated curve gradually fitting the data**
 * This demonstrates how optimization converges
 
-👉 Output:
+ Output:
 
 ![Optimization Animation](results/optimization.gif)
 
 ---
 
-### 📈 Step 3: Final Fitted Curve
+###  Step 3: Final Fitted Curve
 
 * The optimized curve is plotted against actual data
 
-👉 Output:
+ Output:
 
 ![Static Fit](results/static_fit.png)
 
@@ -92,12 +92,12 @@ The program executes a complete **physics + visualization pipeline**:
 
 ---
 
-### 🌟 Step 4: Star Visualization (Key Feature)
+###  Step 4: Star Visualization (Key Feature)
 
 * Estimated temperature is converted into **realistic star color**
 * A glowing star is rendered on a dark background
 
-👉 Output:
+ Output:
 
 ![Star Visualization](results/star_visualization.png)
 
@@ -107,12 +107,12 @@ The program executes a complete **physics + visualization pipeline**:
 
 ---
 
-### 🌌 Step 5: Black Hole Inspired Visualization
+###  Step 5: Black Hole Inspired Visualization
 
 * A simplified accretion disk is displayed
 * Bright ring represents energy emission
 
-👉 Output:
+ Output:
 
 ![Black Hole Inspired Visualization](results/black_hole.png)
 
@@ -120,28 +120,28 @@ The program executes a complete **physics + visualization pipeline**:
 
 ---
 
-### 🌈 Step 6: Multi-Temperature Comparison
+###  Step 6: Multi-Temperature Comparison
 
 * Multiple blackbody curves are plotted together
 
-👉 Output:
+ Output:
 
 * Clear comparison of radiation behavior at different temperatures
 
 ---
 
-### 🎛️ Step 7: Interactive Mode (if enabled)
+###  Step 7: Interactive Mode (if enabled)
 
 * A slider appears allowing you to adjust temperature
 * The curve updates in real time
 
-👉 Output:
+ Output:
 
 * Interactive exploration of Planck’s Law
 
 ---
 
-### 📊 Final Console Output
+###  Final Console Output
 
 ```bash
 Estimated Temperature: 5780 K
@@ -152,7 +152,7 @@ Star Type: Sun-like (G-type)
 
 ---
 
-## 🧠 What This Project Demonstrates
+##  What This Project Demonstrates
 
 * Physics-based modeling (Planck’s Law)
 * Nonlinear optimization (SciPy)
@@ -189,7 +189,7 @@ For best experience:
 └── README.md              # You are here
 ```
 
-## 🔮 Future Improvements
+##  Future Improvements
 1. **Real-world Sensor Integration:** Add parsing scripts for FITS files or standard CSV observatory outputs.
 2. **ML-Based Noise Filtering:** Implement an autoencoder or Savitzky-Golay filter to clean inputs prior to fitting.
 3. **Multi-Parameter Fitting:** Expand optimization to concurrently derive scaling factors or emissivity coefficients ($\epsilon$).
