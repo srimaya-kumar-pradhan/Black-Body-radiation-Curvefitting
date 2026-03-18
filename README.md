@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🌌 Blackbody Radiation Curve Fitting
+#  Blackbody Radiation Curve Fitting
 **High-accuracy parameter estimation for spectral data using Planck's Law and nonlinear optimization.**
 
 ---
@@ -9,36 +9,36 @@
 
 </div>
 
-## 📌 Overview
+##  Overview
 This project models **blackbody radiation** using **Planck’s Law** and fits the model to spectral data (wavelength vs. intensity) using robust nonlinear optimization. By minimizing the residual difference between observed data and the theoretical curve, it estimates the source's temperature with extremely high accuracy (typically **>99%** on synthetic data).
 
 It is designed to be mathematically rigorous, numerically stable, and easy to run—ideal for scientific computing workflows or astronomy data analysis.
 
-## 🖼️ Preview
+##  Preview
 
 Here is an animation of the model gradually fitting the spectral data to discover the temperature:
 
 ![Optimization Animation](results/optimization.gif)
 
-## ✨ Features
+##  Features
 - **Accurate Physics Model:** Fully implements Planck's Law with robust protections against floating-point overflow.
 - **Data Generation Pipeline:** Includes tools to simulate real-world sensor data with Gaussian noise.
 - **Nonlinear Optimization:** Leverages `scipy.optimize.curve_fit` for rapid and bounded parameter convergence.
 - **Detailed Evaluation:** Automatically calculates Mean Squared Error (MSE), R² scores, and percentage error.
 - **Publication-Ready Visuals:** Generates clean, labeled Matplotlib plots comparing actual observations vs. fitted curves.
 
-## 🚀 Quick Start
+##  Quick Start
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/blackbody-curve-fitting.git
+git clone https://github.com/srimaya-kumar-pradhan/blackbody-curve-fitting.git
 cd blackbody-curve-fitting
 ```
 
 ---
 
-### 2️⃣ Install Dependencies
+### 2️ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3️⃣ Run the Project
+### 3️ Run the Project
 
 ```bash
 python main.py
